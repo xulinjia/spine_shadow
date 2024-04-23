@@ -35,6 +35,7 @@ Material:
     - _OutlineWidth: 3
     - _ShadowCutD: 0.8
     - _ShadowDdge: 0.914
+    - _ShadowHeightScale: 1
     - _StencilComp: 8
     - _StencilRef: 1
     - _StraightAlphaInput: 0

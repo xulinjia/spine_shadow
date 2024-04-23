@@ -3,6 +3,7 @@ Shader "Spine/SkeletonShadow" {
 		_ShadowColor("ShadowColor",Color) = (0,0,0,0.5)	//阴影颜色
 		_ShadowDdge("ShadowDege",range(0,1.507)) = 0		//绕x轴的旋转角度
 		_ShadowCutD("_ShadowCutD",float) = 0.5				//切变距离
+		_ShadowHeightScale("_ShadowHeight",float) = 1		// 影子高度比例
 		_Cutoff ("Shadow alpha cutoff", Range(0,1)) = 0.1
 		[NoScaleOffset] _MainTex ("Main Texture", 2D) = "black" {}
 		[Toggle(_STRAIGHT_ALPHA_INPUT)] _StraightAlphaInput("Straight Alpha Texture", Int) = 0
@@ -49,6 +50,7 @@ Shader "Spine/SkeletonShadow" {
 			float4 _ShadowColor;
 			float _ShadowDdge;
 			float _ShadowCutD;
+			float _ShadowHeightScale;
 
 			struct VertexInput {
 				float4 vertex : POSITION;
@@ -66,7 +68,7 @@ Shader "Spine/SkeletonShadow" {
 				VertexOutput o;
 				float4 vt = v.vertex;
 				float4 vtn;
-
+				vt.y *= _ShadowHeightScale;
 				vtn.x = vt.x + vt.y * _ShadowCutD;
 				vtn.y = cos(_ShadowDdge) * vt.y;
 				vtn.z = sin(_ShadowDdge) * vt.y;
