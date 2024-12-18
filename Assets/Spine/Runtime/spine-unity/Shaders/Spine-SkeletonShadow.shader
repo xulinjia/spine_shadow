@@ -1,9 +1,9 @@
-Shader "Spine/SkeletonShadow" {
+锘縎hader "Spine/SkeletonShadow" {
 	Properties {
-		_ShadowColor("ShadowColor",Color) = (0,0,0,0.5)	//阴影颜色
-		_ShadowDdge("ShadowDege",range(0,1.507)) = 0		//绕x轴的旋转角度
-		_ShadowCutD("_ShadowCutD",float) = 0.5				//切变距离
-		_ShadowHeightScale("_ShadowHeight",float) = 1		// 影子高度比例
+		_ShadowColor("ShadowColor",Color) = (0,0,0,0.5)	//闃村奖棰滆壊
+		_ShadowDdge("ShadowDege",range(0,1.507)) = 0		//缁晉杞寸殑鏃嬭浆瑙掑害
+		_ShadowCutD("_ShadowCutD",float) = 0.5				//鍒囧彉璺濈
+		_ShadowHeightScale("_ShadowHeight",float) = 1		// 褰卞瓙楂樺害姣斾緥
 		_Cutoff ("Shadow alpha cutoff", Range(0,1)) = 0.1
 		[NoScaleOffset] _MainTex ("Main Texture", 2D) = "black" {}
 		[Toggle(_STRAIGHT_ALPHA_INPUT)] _StraightAlphaInput("Straight Alpha Texture", Int) = 0

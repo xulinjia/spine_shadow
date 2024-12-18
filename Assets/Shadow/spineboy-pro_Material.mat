@@ -43,5 +43,5 @@ Material:
     - _Use8Neighbourhood: 1
     m_Colors:
     - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
-    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0.62352943}
+    - _ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.92941177}
   m_BuildTextureStacks: []
